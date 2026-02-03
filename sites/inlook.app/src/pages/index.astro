@@ -1,0 +1,54 @@
+---
+import Layout from '../../../../_base/src/layouts/Layout.astro'
+import logoImage from '../assets/logo.svg'
+import glowImage from '../assets/glow.svg'
+import wordmarkImage from '../assets/wordmark.svg'
+import telegramImage from '../assets/telegram.svg'
+---
+
+<Layout title="Inlook" description="Inlook is a daily questions bot. It will message you every day, prompting for self-evaluation." url="https://inlook.app/">
+  <main class="min-h-screen flex flex-col items-center overflow-hidden px-8">
+    <div class="max-w-[400px] text-center">
+      <div class="mt-20 mx-auto w-[104px] h-[104px] overflow-visible relative z-0">
+        <img src={glowImage.src} height={640} width={640} class="absolute block max-w-none -mt-[320px] -ml-[320px] top-[52px] left-[52px] z-10" alt="" />
+        <img src={logoImage.src} class="absolute block z-20" alt="Inlook logo" />
+      </div>
+      <h1 class="mt-4 mb-12 mx-auto relative w-[144px] h-8 bg-no-repeat bg-[length:144px_32px] overflow-hidden text-[0px] indent-[-9999px]" style={`background-image: url(${wordmarkImage.src});`}>
+        Inlook
+      </h1>
+      <p class="text-left relative">Inlook is a daily questions bot. It will message you every day, prompting for self-evaluation.</p>
+      <p class="text-left relative mt-4">
+        Daily questions is a simple method to change your behaviour. Give yourself questions that make you accountable in areas that matter to you. Just by answering daily, your goals will stay top of
+        mind. It works surprisingly well.
+      </p>
+      <p class="text-left relative mt-4 mb-10">
+        The best questions are active and track your effort, not an outcome. Try phrasing them as “Did I do my best today to…” — what is “your best” changes each day. Pick things that matter most.
+      </p>
+      <a
+        class="inline-block rounded-[20px] font-bold text-white pl-10 pr-4 py-2 leading-6 bg-[#3a1c7b] bg-no-repeat"
+        style={`background-image: url(${telegramImage.src}); background-position: 8px 8px;`}
+        href="https://t.me/inlookappbot">Inlook bot on Telegram</a
+      >
+      <p class="italic mt-6">
+        Created by <a class="underline underline-offset-2 decoration-from-font" href="https://lekevicius.com/">Jonas Lekevicius</a>
+      </p>
+    </div>
+  </main>
+</Layout>
+
+<style is:global>
+  @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+</style>
+<style>
+  :root {
+    font-family: 'Lora', serif;
+    background-color: #ffffff;
+    color: #242f3f;
+  }
+
+  body {
+    background-image: url('../assets/background.jpg');
+    background-repeat: no-repeat;
+    background-size: max(1000px, 100%);
+  }
+</style>

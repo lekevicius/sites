@@ -1,0 +1,45 @@
+services:
+  alive_app:
+    image: ghcr.io/lekevicius/site-alive.app:latest
+    ports:
+      - 8081:8080
+  artificial_media:
+    image: ghcr.io/lekevicius/site-artificial.media:latest
+    ports:
+      - 8082:8080
+  cryptoproof_org:
+    image: ghcr.io/lekevicius/site-cryptoproof.org:latest
+    ports:
+      - 8083:8080
+  dark_fm:
+    image: ghcr.io/lekevicius/site-dark.fm:latest
+    ports:
+      - 8084:8080
+  datashape_com:
+    image: ghcr.io/lekevicius/site-datashape.com:latest
+    ports:
+      - 8085:8080
+  form_live:
+    image: ghcr.io/lekevicius/site-form.live:latest
+    ports:
+      - 8086:8080
+  galaxis_app:
+    image: ghcr.io/lekevicius/site-galaxis.app:latest
+    ports:
+      - 8087:8080
+  inlook_app:
+    image: ghcr.io/lekevicius/site-inlook.app:latest
+    ports:
+      - 8088:8080
+  kinetic_app:
+    image: ghcr.io/lekevicius/site-kinetic.app:latest
+    ports:
+      - 8089:8080
+  number_bar:
+    image: ghcr.io/lekevicius/site-number.bar:latest
+    ports:
+      - 8090:8080
+  problemathon_org:
+    image: ghcr.io/lekevicius/site-problemathon.org:latest
+    ports:
+      - 8091:8080

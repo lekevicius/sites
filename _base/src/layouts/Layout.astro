@@ -1,0 +1,50 @@
+---
+import '../styles/global.css'
+
+export interface Props {
+  title: string
+  description: string
+  url: string
+  author?: string
+  twitter?: string
+}
+
+const { title, description, url, author = 'Jonas Lekevicius', twitter = '@lekevicius' } = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+
+    <meta property="og:title" content={title} />
+    <meta name="twitter:title" content={title} />
+    <meta property="og:site_name" content={title} />
+
+    <meta name="description" content={description} />
+    <meta property="og:description" content={description} />
+    <meta name="twitter:description" content={description} />
+
+    <meta property="og:url" content={url} />
+    <meta name="twitter:url" content={url} />
+
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="author" content={author} />
+    <meta name="twitter:site" content={twitter} />
+    <meta name="twitter:creator" content={twitter} />
+
+    <meta property="og:image" content="/social-share.png" />
+    <meta name="twitter:image" content="/social-share.png" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,42 @@
+---
+import Layout from '../../../../_base/src/layouts/Layout.astro'
+---
+
+<Layout title="Kinetic" description="Your new favorite button, arriving later this year." url="https://kinetic.app/">
+  <main class="flex flex-col min-h-screen justify-center p-8">
+    <div class="max-w-[400px] md:ml-24">
+      <h1 class="logo mb-12">Kinetic</h1>
+      <p>
+        Kinetic.app is a really cool domain, originally intended for a design app I am no longer planning to build. I have a couple of other ideas that might fit the name, but they are not high
+        priority.
+      </p>
+      <p class="mt-4">
+        For inquiries about the domain, <a class="underline underline-offset-2 decoration-from-font" href="https://lekevicius.com">contact me</a>.
+      </p>
+    </div>
+  </main>
+</Layout>
+
+<style is:global>
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&display=swap');
+</style>
+<style>
+  @reference '../../../../_base/src/styles/global.css';
+
+  :root {
+    font-family: 'Nunito', serif;
+    background-color: #2b2d6c;
+    color: #f6ffde;
+  }
+
+  .logo {
+    width: 100%;
+    max-width: 328px;
+    aspect-ratio: 328/64;
+    background-image: url(../assets/logo.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    overflow: hidden;
+  }
+</style>

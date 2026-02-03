@@ -1,0 +1,48 @@
+---
+import Layout from '../../../../_base/src/layouts/Layout.astro'
+import logoImage from '../assets/logo.svg'
+import wordmarkImage from '../assets/wordmark.svg'
+---
+
+<Layout title="CryptoProof" description="CryptoProof ran from 2018 to 2021, as a free timestamping service on Ethereum." url="https://cryptoproof.org/">
+  <main class="flex flex-col min-h-screen md:justify-center p-8">
+    <div class="flex flex-col md:flex-row items-start md:ml-32">
+      <img src={logoImage.src} alt="CryptoProof logo" class="-ml-2 md:ml-0" />
+      <div class="max-w-[400px] md:ml-8">
+        <h1
+          class="mt-4 mb-10 -ml-5 md:-ml-6 w-full max-w-[360px] [aspect-ratio:360/80] bg-[length:100%] bg-no-repeat [text-indent:-9999px] overflow-hidden"
+          style={`background-image: url(${wordmarkImage.src});`}
+        >
+          CryptoProof
+        </h1>
+        <p>
+          CryptoProof ran from 2018 to 2021, as a free timestamping service on Ethereum, built by <a class="link" href="https://twitter.com/lekevicius">jonas.eth</a>. As transaction fees picked up,
+          running CryptoProof as initially, naively designed became unsustainable.
+        </p>
+        <p class="mt-4">
+          The idea is now on hold. It likely will be revived as zk rollups become available. Feel free to <a class="link" href="https://lekevicius.com/">contact me</a> for any inquiries about CryptoProof.
+        </p>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style is:global>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+</style>
+<style>
+  @reference '../../../../_base/src/styles/global.css';
+
+  html {
+    font-family: 'Roboto', serif;
+    background-color: #00100a;
+    color: #c5ded1;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .link {
+    @apply underline underline-offset-2 decoration-from-font;
+  }
+</style>

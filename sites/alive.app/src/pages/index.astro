@@ -1,0 +1,43 @@
+---
+import Layout from '../../../../_base/src/layouts/Layout.astro'
+import glowImage from '../assets/glow.svg'
+import logoImage from '../assets/logo.svg'
+import wordmarkImage from '../assets/wordmark.svg'
+---
+
+<Layout title="Alive" description="Alive is a project by Jonas Lekevicius, aiming to be an easy to use “dead man’s switch”." url="https://alive.app/">
+  <main class="flex flex-col items-center overflow-hidden p-8">
+    <div class="max-w-[400px] flex flex-col items-center">
+      <div class="mt-32 mb-6 mx-auto w-[88px] h-[120px] overflow-visible relative z-0">
+        <img src={glowImage.src} height={360} width={640} class="absolute block max-w-none -mt-[180px] -ml-[320px] top-[60px] left-[44px] z-10" alt="" />
+        <img src={logoImage.src} class="absolute block z-20" alt="Alive logo" />
+      </div>
+      <h1 class="relative w-[240px] h-[72px] bg-no-repeat [text-indent:-9999px] overflow-hidden" style={`background-image: url(${wordmarkImage.src}); background-size: 240px 72px;`}>Alive</h1>
+      <p class="mt-16 relative">
+        Alive is a project by Jonas Lekevicius, aiming to be an easy to use <a class="link" href="https://en.wikipedia.org/wiki/Dead_man%27s_switch">“dead man’s switch”</a>. It will be an app you can
+        regularly check in with and prove you are <a class="link" href="https://www.schneier.com/blog/archives/2019/08/bypassing_apple.html">actually alive with FaceID</a>. Not checking in would
+        trigger your pre-defined Alive Protocol.
+      </p>
+      <p class="w-full mt-4 relative">
+        The project is on hold. For inquiries, <a class="link" href="https://lekevicius.com/">contact me</a>.
+      </p>
+    </div>
+  </main>
+</Layout>
+
+<style is:global>
+  @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+</style>
+<style>
+  @reference '../../../../_base/src/styles/global.css';
+
+  :root {
+    font-family: 'Inter', serif;
+    background-color: #e4eaf2;
+    color: #242f3f;
+  }
+
+  .link {
+    @apply underline underline-offset-2 decoration-from-font decoration-slate-400;
+  }
+</style>

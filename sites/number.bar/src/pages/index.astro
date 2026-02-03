@@ -1,0 +1,45 @@
+---
+import Layout from '../../../../_base/src/layouts/Layout.astro'
+---
+
+<Layout title="Numberbar" description="Numberbar one day might answer the question, “what if Soulver, but online and sharable?”" url="https://number.bar/">
+  <main class="flex flex-col h-screen items-center justify-center p-8">
+    <div class="max-w-[400px] text-center">
+      <h1 class="logo mx-auto mb-12">Numberbar</h1>
+      <p>
+        Numberbar one day might answer the question, “what if <a class="link" href="https://soulver.app/">Soulver</a>, but online and sharable?”
+      </p>
+      <p class="mt-4">
+        A project on hold by <a class="link" href="https://lekevicius.com">Jonas Lekevicius</a>.
+      </p>
+    </div>
+  </main>
+</Layout>
+
+<style is:global>
+  @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+</style>
+<style>
+  @reference '../../../../_base/src/styles/global.css';
+
+  :root {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f8f8;
+    color: #5d6062;
+  }
+
+  .link {
+    @apply underline underline-offset-2 decoration-from-font;
+  }
+
+  .logo {
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 320/48;
+    background-image: url(../assets/logo.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    overflow: hidden;
+  }
+</style>

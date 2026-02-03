@@ -1,0 +1,82 @@
+---
+import Layout from '../../../../_base/src/layouts/Layout.astro'
+import logoImage from '../assets/logo.svg'
+---
+
+<Layout title="DataShape" description="DataShape is a new vision for data processing tools, by Jonas Lekevicius." url="https://datashape.com/">
+  <main class="flex flex-col mx-auto max-w-[528px] p-6">
+    <h1 class="mt-6 md:mt-24 w-full max-w-[320px] [aspect-ratio:320/48] bg-[length:100%] bg-no-repeat [text-indent:-9999px] overflow-hidden" style={`background-image: url(${logoImage.src});`}>
+      DataShape
+    </h1>
+    <div class="text mb-20 mt-4 md:mt-14">
+      <p>
+        <strong>DataShape</strong> is a new vision for data processing tools, by Jonas Lekevicius. The project is a on temporary hold.
+        <br />
+        For any inquiries, <a href="https://lekevicius.com/">contact me</a>.
+      </p>
+      <p>There are two first principles upon which DataShape is built.</p>
+      <p>
+        <a href="https://www.ynharari.com/book/homo-deus/">Homo Deus</a> introduced me to idea of <a href="https://en.wikipedia.org/wiki/Dataism">Dataism</a> as one way to interpret the progress of human
+        species. What is a continuous line that’s been growing exponentially for thousands of years? Amount of information we, as humanity, is processing.
+      </p>
+      <p>
+        It’s a trend that’s been going since antiquity, and in recent years, we have felt the true exponential growth of amount of data we process. A trend that’s been going for milleniums is unlikely
+        to stop. There will be more and more data we will want to understand. That is the first “first principle”.
+      </p>
+      <p>
+        Human brains are not good with data. We can only remember around 7 numbers at a time. We are terrible at interpreting probabilites. But we are really good at interpreting visuals. We can spot
+        anomalies and identify trends. There are some types of thinking that we can only do once we turn data into visuals. We developed all kinds of notations: math, music or quantum mechanics. All
+        kinds of diagrams. Visualizations give us assurances and provide inspiration for further ideas. If humans want to understand something, they should always try to turn that idea into a visual.
+        That is the second “first principle”.
+      </p>
+      <p>
+        There is a lot of data, and there will be ever more of it.
+        <br />
+        And humans can’t actually understand data until it is visualized.
+      </p>
+      <p>These are not unique insights, so there are already many attempts to solve this.</p>
+      <p>
+        First category of solutions is BI products. There’s a lot of them, and they are all pretty successful businesses. <a
+          href="https://www.cnbc.com/2019/06/06/google-buys-cloud-company-looker-for-2point6-billion.html">Looker acquired by Google for $2.6B</a
+        >.
+        <a href="https://finance.yahoo.com/news/salesforce-bets-big-data-15-131011877.html">Tableau acquired by Salesforce for $15.3B</a>. BI tools usually visualize well-understood business processes
+        and KPIs in mostly standard ways, and they shine with data integration with different sources. Visualizations are usually built using SQL by data teams inside companies. The goal is surfacing
+        the data it in easily distinguishable form. Good goal.
+      </p>
+      <p>
+        Second approach is “let’s throw an AI at the problem”. If humans can’t understand data, we can skip the whole visualization process and just let AI give us an answer. Sure, it’s a black box
+        and it doesn’t give any understanding, but it works with a lot of data and generally solves the problem. There are many problems to which no amount of visualization will help a mortal human to
+        arrive at understanding. AI is a good tool.
+      </p>
+      <p>
+        Both BI and AI are very worthwhile tools, so I don’t want to suggest that my idea is in opposition. It’s not “no, instead”, but a “yes, and”. The missing piece that neither solutions are
+        covering is human understanding. For <em>humans</em> to <em>understand</em> data, they need to be able to <em>play with it</em>, and visually <em>see their results</em>.
+      </p>
+      <p>That is the vision of DataShape.</p>
+    </div>
+  </main>
+</Layout>
+
+<style is:global>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+</style>
+<style>
+  @reference '../../../../_base/src/styles/global.css';
+  :root {
+    font-family: 'Inter', serif;
+    background-color: #eafcfb;
+    color: #242f3f;
+  }
+
+  .text p {
+    @apply mt-4;
+  }
+
+  body {
+    background-image: url('../assets/background.svg');
+  }
+
+  main a {
+    @apply underline underline-offset-2 decoration-from-font;
+  }
+</style>

@@ -1,0 +1,11 @@
+services:
+  foo:
+    image: ghcr.io/lekevicius/site-example.com:sha-fe1575b
+    networks: [edge]
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.foo.rule=Host(`foo.example.com`)
+      - traefik.http.routers.foo.entrypoints=websecure
+      - traefik.http.routers.foo.tls=true
+      - traefik.http.routers.foo.tls.certresolver=le-dns
+      - traefik.http.services.foo.loadbalancer.server.port=8080

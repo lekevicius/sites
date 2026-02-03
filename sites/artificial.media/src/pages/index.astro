@@ -1,0 +1,42 @@
+---
+import Layout from '../../../../_base/src/layouts/Layout.astro'
+import logoImage from '../assets/logo.svg'
+import wordmarkImage from '../assets/wordmark.svg'
+---
+
+<Layout title="Artificial Media" description="Artificial.media is a cool domain, currently without a purpose." url="https://artificial.media/">
+  <main class="flex flex-col items-center p-8">
+    <div class="max-w-[400px]">
+      <img src={logoImage.src} class="mx-auto" alt="Artificial Media symbol" />
+      <h1
+        class="wordmark mx-auto -mt-12 mb-12 max-w-[256px] w-full [aspect-ratio:32/9] [text-indent:-9999px] overflow-hidden"
+        style={`background-image: url(${wordmarkImage.src}); background-size: 100%; background-repeat: no-repeat;`}
+      >
+        Artificial Media
+      </h1>
+      <p>Artificial.media is a cool domain, currently without a purpose. Generated media is growing in use, adoption and ambition. The idea behind “artificial media” will only grow larger.</p>
+      <p class="mt-4">
+        For inquiries about the domain, or ideas what can be built here, <a class="underline underline-offset-2 decoration-from-font" href="https://lekevicius.com/">contact me</a>.
+      </p>
+    </div>
+  </main>
+</Layout>
+
+<style is:global>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+</style>
+<style>
+  @reference '../../../../_base/src/styles/global.css';
+
+  :root {
+    font-family: 'IBM Plex Sans', serif;
+    background-color: #e5e6f1;
+    color: #39394f;
+  }
+
+  html {
+    background: center top no-repeat;
+    background-image: url('../assets/background.svg');
+    background-size: max(1000px, 100%);
+  }
+</style>

@@ -1,0 +1,27 @@
+---
+import Layout from '../../../../_base/src/layouts/Layout.astro'
+import logoImage from '../assets/logo.svg'
+---
+
+<Layout title="Dark" description="Dark.fm is a music brand for Jonas Lekevicius." url="https://dark.fm/">
+  <main class="flex flex-col min-h-screen">
+    <h1 class="md:order-2 w-full [aspect-ratio:2/1] bg-[length:100%] bg-no-repeat [text-indent:-9999px] overflow-hidden" style={`background-image: url(${logoImage.src});`}>Dark</h1>
+    <p class="md:order-1 grow max-w-[480px] p-8 md:p-0 md:mt-9 md:ml-9">
+      Dark.fm is a music brand by <a class="underline underline-offset-2 decoration-from-font" href="https://lekevicius.com/">Jonas Lekevicius</a>. On a very brief pause since... 2014? Getting back to
+      this project any day now. Aaany day now.
+    </p>
+  </main>
+</Layout>
+
+<style is:global>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+</style>
+<style>
+  @reference '../../../../_base/src/styles/global.css';
+
+  :root {
+    font-family: 'JetBrains Mono', serif;
+    background-color: #00100a;
+    color: #e1fffa;
+  }
+</style>

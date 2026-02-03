@@ -1,0 +1,904 @@
+---
+import Layout from '../../../../_base/src/layouts/Layout.astro'
+
+import speakerLinaLapelyte from '../assets/speakers/speakerLinaLapelyte.jpg'
+import speakerDaliusMisiunas from '../assets/speakers/speakerDaliusMisiunas.jpg'
+import speakerTomasRamanauskas from '../assets/speakers/speakerTomasRamanauskas.jpg'
+import speakerTadasCerniauskas from '../assets/speakers/speakerTadasCerniauskas.jpg'
+import speakerMildaMitkute from '../assets/speakers/speakerMildaMitkute.jpg'
+import speakerJuozasNainys from '../assets/speakers/speakerJuozasNainys.jpg'
+import speakerJogundasArmaitis from '../assets/speakers/speakerJogundasArmaitis.jpg'
+import speakerMonikaKatkuteGelzine from '../assets/speakers/speakerMonikaKatkuteGelzine.jpg'
+import speakerZydruneVitaite from '../assets/speakers/speakerZydruneVitaite.jpg'
+import speakerIdaTin from '../assets/speakers/speakerIdaTin.jpg'
+import speakerTariqKrim from '../assets/speakers/speakerTariqKrim.jpg'
+import speakerTomasBalzekas from '../assets/speakers/speakerTomasBalzekas.jpg'
+import speakerEimantasSabaliauskas from '../assets/speakers/speakerEimantasSabaliauskas.jpg'
+import speakerAudriusJanulis from '../assets/speakers/speakerAudriusJanulis.jpg'
+import speakerMildaIvanauskiene from '../assets/speakers/speakerMildaIvanauskiene.jpg'
+import speakerMarijusAndrijauskas from '../assets/speakers/speakerMarijusAndrijauskas.jpg'
+import speakerAndraBagdonaite from '../assets/speakers/speakerAndraBagdonaite.jpg'
+import speakerDmitrijSosunov from '../assets/speakers/speakerDmitrijSosunov.jpg'
+import speakerGodaRaibyteAleksa from '../assets/speakers/speakerGodaRaibyteAleksa.jpg'
+import speakerJoneVaituleviciute from '../assets/speakers/speakerJoneVaituleviciute.jpg'
+import speakerMonikaPaule from '../assets/speakers/speakerMonikaPaule.jpg'
+import speakerMigleTomkuviene from '../assets/speakers/speakerMigleTomkuviene.jpg'
+import speakerJonasLekevicius from '../assets/speakers/speakerJonasLekevicius.jpg'
+import speakerTomasDirvonskas from '../assets/speakers/speakerTomasDirvonskas.jpg'
+import speakerVaidotasValantiejus from '../assets/speakers/speakerVaidotasValantiejus.jpg'
+import speakerIevaDirvonskaite from '../assets/speakers/speakerIevaDirvonskaite.jpg'
+import speakerLinasPetkevicius from '../assets/speakers/speakerLinasPetkevicius.jpg'
+import speakerAndzelikaRusteikiene from '../assets/speakers/speakerAndzelikaRusteikiene.jpg'
+
+import partnerFirstPickLogo from '../assets/partners/partnerFirstPickLogo.svg'
+import partnerFirstPickInlineLogo from '../assets/partners/partnerFirstPickInlineLogo.svg'
+import partnerVilniusTechFusionLogo from '../assets/partners/partnerVilniusTechFusionLogo.svg'
+import partnerVilniusTechFusionInlineLogo from '../assets/partners/partnerVilniusTechFusionInlineLogo.svg'
+import partnerISMLogo from '../assets/partners/partnerISMLogo.svg'
+import partnerISMInlineLogo from '../assets/partners/partnerISMInlineLogo.svg'
+
+import partnerAIALLogo from '../assets/partners/partnerAIALLogo.svg'
+import partnerGoogleLogo from '../assets/partners/partnerGoogleLogo.svg'
+import partnerMoLogo from '../assets/partners/partnerMoLogo.svg'
+import partnerWGTLogo from '../assets/partners/partnerWGTLogo.svg'
+import partnerUnicornsLogo from '../assets/partners/partnerUnicornsLogo.svg'
+import partner15Logo from '../assets/partners/partner15Logo.svg'
+import partnerLithuaniaBioLogo from '../assets/partners/partnerLithuaniaBioLogo.svg'
+import partnerNordSecurityLogo from '../assets/partners/partnerNordSecurityLogo.svg'
+import partnerTeachersLeadTechLogo from '../assets/partners/partnerTeachersLeadTechLogo.svg'
+import partnerBrewLogo from '../assets/partners/partnerBrewLogo.svg'
+import partnerTechPhilomathsLogo from '../assets/partners/partnerTechPhilomathsLogo.svg'
+
+import linkIcon from '../assets/linkIcon.svg'
+
+const speakerData = [
+  {
+    img: speakerLinaLapelyte,
+    name: 'Lina Lapelytė',
+    role: 'Artist, Composer, Performer',
+    link: 'https://www.linalapelyte.com/',
+  },
+  {
+    img: speakerIdaTin,
+    name: 'Ida Tin',
+    role: 'Clue, Co-founder; coined the term "femtech"',
+    link: 'https://en.wikipedia.org/wiki/Ida_Tin',
+  },
+  {
+    img: speakerTariqKrim,
+    name: 'Tariq Krim',
+    role: 'Tech philosopher',
+    link: 'https://www.tariqkrim.com/',
+  },
+  {
+    img: speakerDaliusMisiunas,
+    name: 'Dalius Misiūnas',
+    role: 'President of ISM University',
+    link: 'https://www.linkedin.com/in/dalius-misiunas-8639b94/',
+  },
+  {
+    img: speakerTomasRamanauskas,
+    name: 'Tomas Ramanauskas',
+    role: 'Creative Director',
+    link: 'https://tomasramanauskas.com/',
+  },
+  {
+    img: speakerTadasCerniauskas,
+    name: 'Tadas Černiauskas',
+    role: 'Artist',
+    link: 'http://www.tadaocern.com/',
+  },
+  {
+    img: speakerJoneVaituleviciute,
+    name: 'Jonė Vaitulevičiūtė',
+    role: 'FIRSTPICK, Managing Partner',
+    link: 'https://www.linkedin.com/in/jonevait',
+  },
+  {
+    img: speakerMildaMitkute,
+    name: 'Milda Mitkutė',
+    role: 'Vinted, Co-founder',
+    link: 'https://www.linkedin.com/in/milda-mitkutė-29321161',
+  },
+  {
+    img: speakerJuozasNainys,
+    name: 'Juozas Nainys',
+    role: 'Droplet Genomics, Co-founder',
+    link: 'https://www.linkedin.com/in/juozas-nainys-974b12178',
+  },
+  {
+    img: speakerTomasBalzekas,
+    name: 'Tomas Balžekas',
+    role: '15min, Co-founder',
+    link: 'https://www.linkedin.com/in/tomasbalzekas/',
+  },
+  {
+    img: speakerJogundasArmaitis,
+    name: 'Jogundas Armaitis',
+    role: 'Entrepreneur, Marie Curie Individual Fellow',
+    link: 'https://www.linkedin.com/in/jogundas',
+  },
+  {
+    img: speakerLinasPetkevicius,
+    name: 'Linas Petkevičius',
+    role: 'Artificial Intelligence Association of Lithuania, Board Member',
+    link: 'https://www.linkedin.com/in/linas-petkevicius/',
+  },
+  {
+    img: speakerMonikaKatkuteGelzine,
+    name: 'Monika Katkutė-Gelžinė',
+    role: 'Teachers Lead Tech, Co-founder',
+    link: 'https://www.linkedin.com/in/monikakatkute',
+  },
+  {
+    img: speakerZydruneVitaite,
+    name: 'Žydrūnė Vitaitė',
+    role: 'Women Go Tech, Co-founder',
+    link: 'https://womengotech.com/about-us/',
+  },
+  {
+    img: speakerEimantasSabaliauskas,
+    name: 'Eimantas Sabaliauskas',
+    role: 'Nord Security, Co-founder',
+    link: 'https://www.linkedin.com/in/eimis/',
+  },
+  {
+    img: speakerAndzelikaRusteikiene,
+    name: 'Andželika Rusteikienė',
+    role: 'Junior Achievement Lithuania, CEO',
+    link: 'https://www.linkedin.com/in/andzelika-rusteikiene/',
+  },
+  {
+    img: speakerMonikaPaule,
+    name: 'Monika Paulė',
+    role: 'Caszyme, CEO',
+    link: 'https://www.linkedin.com/in/monika-paule-phd-0953962',
+  },
+  {
+    img: speakerMigleTomkuviene,
+    name: 'Miglė Tomkuvienė',
+    role: 'Researcher, VU Life Sciences Center',
+    link: 'https://www.gmc.vu.lt/mokslas/mokslininku-profiliai/dr-migle-tomkuviene',
+  },
+  {
+    img: speakerAudriusJanulis,
+    name: 'Audrius Janulis',
+    role: 'Startups at Google, Industry Manager',
+    link: 'https://www.linkedin.com/in/audriusjanulis/',
+  },
+  {
+    img: speakerMildaIvanauskiene,
+    name: 'Milda Ivanauskienė',
+    role: 'MO Museum, Director',
+    link: 'https://www.linkedin.com/in/milda-ivanauskien%C4%97-83a5275/',
+  },
+  {
+    img: speakerMarijusAndrijauskas,
+    name: 'Marijus Andrijauskas',
+    role: 'FIRSTPICK, Partner',
+    link: 'https://www.linkedin.com/in/marijus-andrijauskas/',
+  },
+  {
+    img: speakerAndraBagdonaite,
+    name: 'Andra Bagdonaitė',
+    role: 'FIRSTPICK, Partner',
+    link: 'https://www.linkedin.com/in/andrabagdonaite',
+  },
+  {
+    img: speakerDmitrijSosunov,
+    name: 'Dmitrij Sosunov',
+    role: 'FIRSTPICK, Founding Partner',
+    link: 'https://www.linkedin.com/in/dmitrijsosunov',
+  },
+  {
+    img: speakerGodaRaibyteAleksa,
+    name: 'Goda Raibytė-Aleksa',
+    role: 'Science Journalist',
+    link: 'https://www.linkedin.com/in/goda-raibytė',
+  },
+  {
+    img: speakerTomasDirvonskas,
+    name: 'Tomas Dirvonskas',
+    role: 'Organizer',
+    link: 'https://www.linkedin.com/in/tdirvonskas/',
+  },
+  {
+    img: speakerJonasLekevicius,
+    name: 'Jonas Lekevičius',
+    role: 'Organizer',
+    link: 'https://lekevicius.com',
+  },
+  {
+    img: speakerIevaDirvonskaite,
+    name: 'Ieva Dirvonskaitė',
+    role: 'Organizer',
+    link: 'https://www.linkedin.com/in/dirvonskaite/',
+  },
+  {
+    img: speakerVaidotasValantiejus,
+    name: 'Vaidotas Valantiejus',
+    role: 'Organizer',
+    link: 'https://www.linkedin.com/in/vaidotasvalantiejus/',
+  },
+]
+---
+
+<Layout
+  title="Problemathon"
+  description="It’s time to solve real problems. Join us for a weekend-long problemathon. The event is designed for cross-discipline thinking, focused on identifying key problems and sustainable solutions."
+  url="https://problemathon.org/"
+  author="Problemathon Team"
+  twitter="@problemathon"
+>
+  <main class="mx-auto max-w-3xl px-8">
+    <section id="header" class="font-nanum text-2xl px-4">
+      <h1 class="mt-6 sm:mt-20 mx-auto logo">Problemathon</h1>
+      <p class="mx-auto text-4xl leading-8 text-center mt-2 sm:mb-8 mb-12">
+        Micro conference &<br />
+        think tank for a weekend
+      </p>
+      <div class="date text-4xl text-center mb-8">April 21-23, Vilnius</div>
+      <div class="info-line flex flex-col sm:flex-row gap-6 sm:gap-12 items-center justify-center">
+        <a href="https://vilniustechfusion.com/en/" class="sponsor-item flex text-right leading-4 items-center gap-4">
+          <span>
+            Powered <br />
+            by
+          </span>
+          <img src={partnerVilniusTechFusionInlineLogo.src} alt="Vilnius TechFusion" />
+        </a>
+        <a href="https://firstpick.notion.site/FIRSTPICK-62c5f26d91aa4c7193d8c7886a30e58f" class="sponsor-item flex text-right leading-4 items-center gap-4">
+          <span>
+            Accelerated <br />
+            by
+          </span>
+          <img src={partnerFirstPickInlineLogo.src} alt="FIRSTPICK" />
+        </a>
+        <a href="https://www.ism.lt/en/" class="sponsor-item flex text-right leading-4 items-center gap-4">
+          <span>
+            Hosted <br />
+            by
+          </span>
+          <img src={partnerISMInlineLogo.src} alt="ISM" />
+        </a>
+      </div>
+      <hr class="hr sm:-mx-16 h-1 border-0 my-12" />
+    </section>
+    <nav class="flex justify-center font-nanum text-3xl">
+      {/* sticky top-0 py-4 -mx-4 bg-[#eef0f3] */}
+      <ul class="flex flex-col sm:flex-row items-center gap-2 sm:gap-10">
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#speakers">Speakers</a>
+        </li>
+        <li>
+          <a href="#agenda">Agenda</a>
+        </li>
+        {
+          /* <li>
+          <a href="#partners">Partners</a>
+        </li> */
+        }
+        <li>
+          <a href="#faq">FAQ</a>
+        </li>
+        <li>
+          <a class="button px-4" href="#registration"> Registration </a>
+        </li>
+      </ul>
+    </nav>
+    <section id="about">
+      <h2>About</h2>
+      {
+        /* <div class="pillars grid grid-cols-1 sm:grid-cols-3 gap-8">
+        <div>
+          <h4 class="text-2xl font-medium mb-6">Unique crowd</h4>
+          <p>
+            Unique group of people coming together to tackle the most important problems of our lifetime.
+            Problemathon is a place where tech community meets philosophers, artists, scientists, activists and
+            every other type of curious minds.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-2xl font-medium mb-6">Not a hackathon</h4>
+          <p>
+            No coding or design skills needed, and the result will not be dozens of throwaway prototypes. The event
+            is designed for cross-discipline thinking. Raise the problem, come up with an innovative solution, share
+            it with the audience and win.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-2xl font-medium mb-6">Inspiration</h4>
+          <p>
+            Be among the brightest minds. Come and be inspired by the forward thinking speakers, artists and tech
+            community leaders. Learn their stories, insights and ways of thinking.
+          </p>
+        </div>
+      </div> */
+      }
+
+      <div class="prizes sm:grid sm:grid-cols-3 gap-8 mt-16">
+        <h3 class="mb-8 sm:mb-0">Not a hackathon</h3>
+        <p class="col-span-2 text-xl">
+          Problemathon is a place where tech community meets philosophers, artists, scientists, activists and every other type of curious minds. No coding or design skills needed, the outcome we seek
+          is not dozens of throwaway prototypes. This event is designed for cross-discipline thinking. Raise the problem, come up with an innovative solution, share it with the audience and win.
+        </p>
+      </div>
+
+      <div class="topics sm:grid sm:grid-cols-3 gap-8 mt-16">
+        <h3 class="mb-8 sm:mb-0">Topics</h3>
+        <ul class="col-span-2 grid grid-cols-2 gap-8 text-xl">
+          <li>Climate Change</li>
+          <li>Artificial Inteligence</li>
+          <li>Biotech</li>
+          <li>Web3</li>
+          <li class="col-span-2">+ Open to any other topics of your choice</li>
+        </ul>
+      </div>
+      <div class="prizes sm:grid sm:grid-cols-3 gap-8 mt-16">
+        <h3 class="mb-8 sm:mb-0">Prizes</h3>
+        <p class="col-span-2 text-xl">
+          <strong>15 000 Eur grant and pre-acceleration program from FIRSTPICK for the best team. </strong>1 000 Eur for two runners up. It doesn’t matter which theme your problem is from — anyone can
+          win.
+        </p>
+      </div>
+    </section>
+    <section id="speakers">
+      <h2>Speakers, jury, mentors</h2>
+      <ul class="grid grid-cols-2 sm:grid-cols-4 gap-8">
+        {
+          speakerData.map((speaker) => (
+            <li>
+              <img class="mix-blend-multiply" src={speaker.img.src} alt={speaker.name} />
+              <h4 class="mt-4 text-xl font-medium">
+                {speaker.name.split(' ').slice(0, -1).join(' ')}
+                <br />
+                {speaker.name.split(' ')[speaker.name.split(' ').length - 1]}
+              </h4>
+              <p class="my-2">{speaker.role}</p>
+              <a href={speaker.link}>
+                <img src={linkIcon.src} alt="Speaker website" />
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+    <section id="agenda">
+      <h2>Agenda</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div class="grid grid-cols-[80px_1fr] gap-0 gap-y-3">
+          <h3 class="text-2xl font-bold mb-4 col-span-2">
+            Friday,{` `}
+            <span class="font-medium">April 21st</span>
+          </h3>
+          <div>16:00</div>
+          <div>Doors open. Registration.</div>
+          <div class="font-bold">17:00</div>
+          <div class="font-bold">Welcome to Problemathon!</div>
+          <div>17:15</div>
+          <div>
+            <p>Milda Ivanauskienė, MO</p>
+            <p class="text-sm">“Miscommunicate much?”</p>
+          </div>
+          <div>17:30</div>
+          <div>
+            <p>Tariq Krim, Tadas Černiauskas, Tomas Balžekas</p>
+            <p class="text-sm">“AI: art, media & entrepreneurship”</p>
+          </div>
+          <div>18:00</div>
+          <div>
+            <p>Ida Tin</p>
+            <p class="text-sm">“From Art to Framing 1 Trillion Industry”</p>
+          </div>
+          <div>18:20</div>
+          <div>
+            <p>Juozas Nainys, Monika Paulė, Miglė Tomkuvienė</p>
+            <p class="text-sm">“Biotech: exploring the possibilities of biology and it’s impact on our lives”</p>
+          </div>
+          <div>18:50</div>
+          <div>
+            <p>Tomas Ramanauskas</p>
+            <p class="text-sm">“15 itchy questions”</p>
+          </div>
+          <div class="opacity-60">19:10</div>
+          <div class="opacity-60">Break</div>
+          <div>19:30</div>
+          <div>Pitching session</div>
+          <div>20:00</div>
+          <div>Networking & team formations</div>
+          <div>21:00</div>
+          <div>Wrap up for the day</div>
+        </div>
+        <div class="grid grid-cols-[80px_1fr] gap-0 gap-y-3">
+          <h3 class="text-2xl font-bold mb-4 col-span-2">
+            Saturday,{` `}
+            <span class="font-medium">April 22nd</span>
+          </h3>
+          <div>09:00</div>
+          <div>Doors open. Coffee.</div>
+          <div class="font-bold">10:00</div>
+          <div class="font-bold">Kick-off & info</div>
+          <div>10:30</div>
+          <div>Team work</div>
+          <div>14:00</div>
+          <div>
+            <p>Mentoring session</p>
+            <p class="text-sm">Mentors’ office hours until 16:00</p>
+          </div>
+          <div>22:00</div>
+          <div>Doors close</div>
+          <h3 class="text-2xl font-bold mb-4 col-span-2 mt-8">
+            Sunday,{` `}
+            <span class="font-medium">April 23rd</span>
+          </h3>
+          <div>09:00</div>
+          <div>Doors open. Coffee.</div>
+          <div>10:00</div>
+          <div>Pitch submission hour, deadline 11:00</div>
+          <div class="font-bold">11:00</div>
+          <div>
+            <p class="font-bold">Closing panel</p>
+            <p>Lina Lapelytė, Milda Mitkutė, Eimantas Sabaliauskas, Audrius Janulis</p>
+            <p class="text-sm">“How to make ideas happen?”</p>
+          </div>
+          <div>12:00</div>
+          <div>Pitching session</div>
+          <div>13:00</div>
+          <div>Brunch</div>
+          <div class="font-bold">14:00</div>
+          <div class="font-bold">Awards Ceremony</div>
+        </div>
+      </div>
+    </section>
+    <section id="partners">
+      <h2>Partners</h2>
+      <ul class="key-partners grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+        <li>
+          <a href="https://vilniustechfusion.com/en/">
+            <p>Powered by</p>
+            <img src={partnerVilniusTechFusionLogo.src} alt="Vilnius TechFusion" class="w-full max-w-sm mx-auto" />
+          </a>
+        </li>
+        <li>
+          <a href="https://firstpick.notion.site/FIRSTPICK-62c5f26d91aa4c7193d8c7886a30e58f">
+            <p>Accelerated by</p>
+            <img src={partnerFirstPickLogo.src} alt="FIRSTPICK" class="w-full max-w-sm mx-auto" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.ism.lt/en/">
+            <p>Hosted by</p>
+            <img src={partnerISMLogo.src} alt="ISM" class="w-full max-w-sm mx-auto" />
+          </a>
+        </li>
+      </ul>
+      <ul class="friends grid grid-cols-2 sm:grid-cols-5 gap-8 mt-8">
+        <li>
+          <a href="https://www.google.lt/">
+            <img src={partnerGoogleLogo.src} alt="Google" />
+          </a>
+        </li>
+        <li>
+          <a href="https://mo.lt/">
+            <img src={partnerMoLogo.src} alt="Mo Museum" />
+          </a>
+        </li>
+        <li>
+          <a href="https://womengotech.com/">
+            <img src={partnerWGTLogo.src} alt="Women Go Tech" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.15min.lt/">
+            <img src={partner15Logo.src} alt="15min" />
+          </a>
+        </li>
+        <li>
+          <a href="https://unicorns.lt/en">
+            <img src={partnerUnicornsLogo.src} alt="Unicorns Lithuania" />
+          </a>
+        </li>
+        <li>
+          <a href="https://lithuaniabio.com/en/lithuanian-biotechnology-associasion/">
+            <img src={partnerLithuaniaBioLogo.src} alt="LithuaniaBIO" />
+          </a>
+        </li>
+        <li>
+          <a href="https://nordsecurity.com/">
+            <img src={partnerNordSecurityLogo.src} alt="NORD Security" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.vedliai.lt/">
+            <img src={partnerTeachersLeadTechLogo.src} alt="Teachers Lead Tech" />
+          </a>
+        </li>
+        <li>
+          <a href="https://lithuania.ai/">
+            <img src={partnerAIALLogo.src} alt="Artificial Intelligence Association of Lithuania" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.brew.lt/">
+            <img src={partnerBrewLogo.src} alt="Brew Specialty Coffee" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.philomaths.tech/">
+            <img src={partnerTechPhilomathsLogo.src} alt="Tech Philomaths" />
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section id="faq">
+      <h2>FAQ</h2>
+      <ul class="flex flex-col gap-8">
+        <li class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <h3>You have my attention for 30 seconds, how does this work?</h3>
+          <div class="col-span-2 prose">
+            <ul>
+              <li>
+                <strong>Problem.</strong> Pitch your problem. You’ll have 60 seconds for this during Friday evening.
+              </li>
+              <li>
+                <strong>Team.</strong> Form your team. It usually happens organically during networking time on Friday evening, we’ll give you a poster to stand out of the crowd. You can also bring your
+                team to the event. Just remember the more diverse perspectives you have on the team, the better.
+              </li>
+              <li>
+                <strong>Solution.</strong> Work out the solution. You’ll have full Saturday and Sunday morning for your team discussions. The goal is to come up with innovative solution for your problem,
+                bear in mind that it has to be technically feasible and economically viable. We’ll organise mentors for insights and some activities to keep your mind fresh throughout the day.
+              </li>
+              <li>
+                <strong>Present.</strong> Share your results with the audience and jury. Guidelines for presentation will be provided shortly.
+              </li>
+              <li>
+                <strong>Win.</strong> There will be prizes for top 3 teams.
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <h3>Where is the event taking place?</h3>
+          <div class="col-span-2 prose">
+            <p>
+              It is in the iconic former Central Post’s building, now the new home of the ISM university.
+              <br /> Address is <a href="https://goo.gl/maps/AJXyFMCJqS4pskwR9">Gedimino ave 7, Vilnius</a> — click for map link. Don’t mix it with Arklių st.!
+            </p>
+          </div>
+        </li>
+        <li class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <h3>Can I come just listen to the keynotes on Friday?</h3>
+          <div class="col-span-2 prose">
+            <p>Yes, you can come just for the Friday session. Registration still required. And who knows, you might get inspired and stay the whole weekend.</p>
+          </div>
+        </li>
+        <li class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <h3>Are team pitches on Sunday open to public?</h3>
+          <div class="col-span-2 prose">
+            <p>Yes, you are welcome to come on Sunday, registration not required. Agenda for Sunday:</p>
+            <ul>
+              <li>11:00 Panel: “How to make ideas happen?”, with Lina Lapelytė, Milda Mitkutė, Eimantas Sabaliauskas and Audrius Janulis.</li>
+              <li>12:00 Team pitches</li>
+              <li>13:00 Break &amp; brunch</li>
+              <li>14:00 Awards</li>
+            </ul>
+          </div>
+        </li>
+        <li class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <h3>How many people can be on the team?</h3>
+          <div class="col-span-2 prose">
+            <p>
+              There is no specific requirement. You can be solo or as many as 10, if each team member has enough space to contribute. Important to be able to come up with a strong, well-researched
+              solution for the problem, and ideally push it towards execution.
+            </p>
+          </div>
+        </li>
+        <li class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <h3>How should I present the problem on Friday?</h3>
+          <div class="col-span-2 prose">
+            <p>
+              Problems will be presented on Friday 19:30. Each person will have <strong>up to</strong> 60 seconds on stage. You can use slides (please send up to 3 slides as images (.png or .jpg, 1920x1080)
+              by 16:00 to hello@problemathon.org) or simply tell a story. The goal is to inspire others to join your team and give heads up to the jury.
+            </p>
+          </div>
+        </li>
+        <li class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <h3>What is the structure for the problem pitch on Friday?</h3>
+          <div class="col-span-2 prose">
+            <p>You will have only 60 seconds. Pitch has to be straightforward, easy to understand, yet also inspiring! Feel free to improvise, just bear in mind to cover the points below:</p>
+            <ul>
+              <li>
+                <strong>Problem.</strong> Clearly state what problem you are willing to solve.{' '}
+                <strong>It has to be a problem, not an idea.</strong> If you have an idea, think what problem does it address and reframe it. It has to be just one problem. If you tackle multiple, pick
+                the main one to present.
+              </li>
+              <li>
+                <strong>Impact.</strong> Please try to reveal the scale of the problem and positive impact if it is solved. Here are some questions which might help you: How big is the problem, is it painful
+                for a large group of people and/or businesses? Why is it important to solve this problem now? What is the potential positive impact for the world if this problem is solved?
+              </li>
+              <li>
+                <strong>Team.</strong> Who are you and who is on your team, covering what roles? Are you looking for someone to join your team? Tell your team number (we’ll give you one) and/or team’s
+                name. It will help people to find you later during networking section.
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <h3>What is the structure for the final pitch on Sunday?</h3>
+          <div class="col-span-2 prose">
+            <p>
+              Each team will have 2 minutes for presenting + 1 min for Q&amp;A from Jury. Again, feel free to use slides (please send up to 3 slides as images (.png or .jpg, 1920x1080) by 11:00 on
+              Sunday to hello@problemathon.org) or just tell a story on stage. There is no specific template for the final pitch, but please cover the points below.
+            </p>
+            <ul>
+              <li>
+                <strong>Problem.</strong> Clearly state what problem you are trying to solve. Has it changed since Friday? Fine-tune it to be specific and impactful. Use simple words, not everyone might
+                be familiar with your field.
+              </li>
+              <li>
+                <strong>Solution.</strong> This is the key part you are going to focus your weekend on. Please share what is the strategy behind your solution, how is it unique and why this is the best
+                way to solve the problem. Do you have any way to demonstrate that it is desired by people (data, testimonials, reasoning, etc.)? Is it technically possible to implement such solution?
+              </li>
+              <li>
+                <strong>Impact.</strong> Please try to reveal the scale of the problem and positive impact if it is solved. Here are some questions which might help you: How big is the problem, is it painful
+                for a large group of people and/or businesses? Why is it important to solve this problem now? What is the potential positive impact for the world if this problem is solved? What’s your
+                mission?
+              </li>
+              <li>
+                <strong>Competition.</strong> Is someone trying to solve this problem already? How are you different? Why your solution is better? Don’t overdo it. Just a simple overview, by doing this
+                you might learn new things which will help for your own thinking.
+              </li>
+              <li>
+                <strong>Economics.</strong> We don’t ask for a business plan. However, each idea/solution has to be economically viable. This will be one of the valuation criteria for the jury. Please
+                share what is the logic and mechanics of the long-term sustainability for your solution. How will you ensure funding in order to keep the solution running?
+              </li>
+              <li>
+                <strong>Team.</strong> Who are in your team? Why this team is the most suited to solve this problem? Are you missing any role to take it off the ground?
+              </li>
+              <li>
+                <strong>Next.</strong> What would you want to do next: nothing, or move to implementation? Do you need funding for this? How much are your team committed to take this idea forward?
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <h3>What are the valuation criteria for the ideas?</h3>
+          <div class="col-span-2 prose">
+            <p>
+              There are basic criteria for the ideas. In addition jury members are welcome to apply their own intuition, world views and subjectivity. The criteria’s we think matter the most for
+              success:
+            </p>
+            <ul>
+              <li>
+                <strong>Impact.</strong> What is the value for the planet / humanity if this problem is solved. What is the mission of your team?
+              </li>
+              <li>
+                <strong>Problem</strong> and it’s relevance. Why is it important? Do you have any data to back it up?
+              </li>
+              <li>
+                <strong>Solution.</strong> It has to be desirable from human point of view, it has to be technically feasible (possible to implement) and economically viable.
+              </li>
+              <li>
+                <strong>Team</strong> and your appetite to take this idea forward. How diverse is your team, are there any critical roles missing?
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <h3>How teams will be formed?</h3>
+          <div class="col-span-2 prose">
+            <p>
+              Each person willing to present the problem will have 60 seconds on stage on Friday at 19:30. They will be assigned a number. There will be number posters in the event place. Others
+              willing to join your team will come to that place to meet during networking session ~20:00 on Friday. Usually this happens organically, don’t worry too much. And in case you don’t form a
+              team, consider joining others yourself.
+            </p>
+          </div>
+          <h3>We formed a team, what’s next?</h3>
+          <div class="col-span-2 prose">
+            <p>
+              Once you form a team, please register with the volunteers at the registration desk on Friday or Saturday morning. Saturday doors open at 9:00, coffee and croissants on us. Each team will
+              get an assigned workplace. Then your team work starts and you have to submit your final presentation by 11:00 on Sunday. Best of luck!
+            </p>
+          </div>
+          <h3>I still have some questions, how can I contact you?</h3>
+          <div class="col-span-2 prose">
+            <p>
+              You can{' '}
+              <a href="https://www.facebook.com/groups/5592323044202015"> join Facebook group for Problemathon participants </a>{' '}
+              or simply email us at hello@problemathon.org.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section id="registration">
+      <h2>Registration</h2>
+      <p>
+        Event is <strong>free</strong> and open to those who register their interest. Please register and join the community of brightest minds. We are reviewing the applications on the rolling basis and
+        will contact you before the event.
+      </p>
+      <a href="https://forms.gle/b6BdMtjGF61jxJzo6" class="button inline-block font-nanum text-3xl mt-6 py-4 px-4"> Register to Attend </a>
+    </section>
+    <section id="bottom" class="mt-20 mb-16">
+      <p class="leading-5 mt-4">
+        Organized by the team behind{' '}
+        <a class="underline underline-offset-2 decoration-gray-400 decoration-from-font" href="https://aicamp.co/"> AI Camp </a>
+        .
+      </p>
+      <ul class="mt-4">
+        <li>
+          <a class="contact-link" href="mailto:hello@problemathon.org"> Contact us </a>
+        </li>
+        <li>
+          <a class="facebook-link" href="https://www.facebook.com/groups/5592323044202015"> Facebook Group for Event </a>
+        </li>
+        <li>
+          <a class="facebook-link" href="https://www.facebook.com/events/236608218833206/"> Event on Facebook </a>
+        </li>
+        <li>
+          <a class="twitter-link" href="https://twitter.com/problemathon"> Follow us on Twitter </a>
+        </li>
+        {
+          /* <li>
+          <a class={styles.linkedinLink} href="https://twitter.com/problemathon">
+            Follow us on LinkedIn
+          </a>
+        </li> */
+        }
+      </ul>
+    </section>
+  </main>
+</Layout>
+
+<style is:global>
+  @import url('https://fonts.googleapis.com/css2?family=Mali:wght@400;500;700&family=Nanum+Pen+Script&family=Rock+Salt&display=swap');
+</style>
+<style>
+  @reference '../../../../_base/src/styles/global.css';
+
+  :root {
+    font-family: 'Mali', serif;
+    background-color: #eef0f3;
+    color: #123053;
+  }
+
+  .font-nanum {
+    font-family: 'Nanum Pen Script', serif;
+  }
+
+  .font-rock {
+    font-family: 'Rock Salt', serif;
+  }
+
+  html,
+  body {
+    background-image: url('../assets/background.svg');
+  }
+
+  h2 {
+    font-family: 'Rock Salt', serif;
+    text-transform: lowercase;
+    @apply text-3xl sm:text-5xl overflow-visible leading-10 mt-10 sm:mt-40 mb-6 sm:mb-20;
+  }
+
+  h3 {
+    font-family: 'Rock Salt', serif;
+    text-transform: lowercase;
+    @apply text-lg sm:text-2xl overflow-visible leading-6 m-0;
+  }
+
+  #faq h3 {
+    font-family: 'Nanum Pen Script', serif;
+    @apply text-2xl sm:text-3xl overflow-visible leading-6 m-0;
+  }
+
+  h4 {
+    @apply font-bold;
+  }
+
+  .logo {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 200/100;
+    background-image: url(../assets/logo.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    overflow: hidden;
+  }
+
+  .hr {
+    display: block;
+    background-image: url(../assets/hr.svg);
+    background-size: 100% 100%;
+  }
+
+  .highlight {
+    background-image: url(../assets/highlight.svg);
+    background-size: 100% 100%;
+    mix-blend-mode: multiply;
+  }
+
+  .button {
+    background-image: url(../assets/button.svg);
+    background-size: 100% 100%;
+    mix-blend-mode: multiply;
+  }
+
+  .contactLink,
+  .facebookLink,
+  .twitterLink,
+  .linkedinLink {
+    background-size: 32px 32px;
+    background-repeat: no-repeat;
+    padding-left: 48px;
+    display: inline-block;
+    min-height: 32px;
+    line-height: 32px;
+  }
+
+  .contactLink {
+    background-image: url(../assets/email.svg);
+  }
+
+  .facebookLink {
+    background-image: url(../assets/facebook.svg);
+    margin-top: 16px;
+  }
+
+  .twitterLink {
+    background-image: url(../assets/twitter.svg);
+    margin-top: 16px;
+  }
+  .linkedinLink {
+    background-image: url(../assets/linkedin.svg);
+    margin-top: 16px;
+  }
+
+  @media only screen and (min-width: 1024px) {
+  }
+
+  @media only screen and (min-resolution: 96dpi) {
+  }
+
+  .shake {
+    animation: shake 1s infinite;
+  }
+  @keyframes shake {
+    0% {
+      transform: translate(2px, 1px) rotate(0deg);
+    }
+    10% {
+      transform: translate(-1px, -2px) rotate(-2deg);
+    }
+    20% {
+      transform: translate(-3px, 0px) rotate(3deg);
+    }
+    30% {
+      transform: translate(0px, 2px) rotate(0deg);
+    }
+    40% {
+      transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+      transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+      transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+      transform: translate(2px, 1px) rotate(-2deg);
+    }
+    80% {
+      transform: translate(-1px, -1px) rotate(4deg);
+    }
+    90% {
+      transform: translate(2px, 2px) rotate(0deg);
+    }
+    100% {
+      transform: translate(1px, -2px) rotate(-1deg);
+    }
+  }
+</style>

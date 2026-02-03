@@ -1,0 +1,57 @@
+---
+import Layout from '../../../../_base/src/layouts/Layout.astro'
+import logoImage from '../assets/logo.svg'
+---
+
+<Layout title="Galaxis" description="Galaxis is an infinite puzzle game in development by Jonas Lekevicius." url="https://galaxis.app/">
+  <main class="min-h-screen flex flex-col items-center justify-center p-8">
+    <img src={logoImage.src} alt="Galaxis logo" />
+    <h1 class="wordmark my-10">Galaxis</h1>
+    <p class="max-w-[400px] text-center">
+      Galaxis is an infinite puzzle game in development by <a class="link" href="https://lekevicius.com/">Jonas Lekevicius</a>, creator of <a class="link" href="https://lekevicius.com/loop/"
+        >Infinite Loop</a
+      >, another infinite puzzle played by over 50 million players.
+    </p>
+    <p class="max-w-[320px] text-center mt-4">
+      <a class="link" href="https://twitter.com/lekevicius">Follow me</a> to be notified when Galaxis is available.
+    </p>
+  </main>
+</Layout>
+
+<style is:global>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+</style>
+<style>
+  @reference '../../../../_base/src/styles/global.css';
+
+  :root {
+    font-family: 'DM Sans', serif;
+    background-color: #600f7c;
+    color: #ffffff;
+  }
+
+  main p {
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  html {
+    background: center center no-repeat;
+    background-size: cover;
+    background-image: url('../assets/background.jpg');
+  }
+
+  .link {
+    @apply underline underline-offset-2 decoration-from-font;
+  }
+
+  .wordmark {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 400/56;
+    background-image: url(../assets/wordmark.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    overflow: hidden;
+  }
+</style>

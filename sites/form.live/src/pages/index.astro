@@ -1,0 +1,31 @@
+---
+import Layout from '../../../../_base/src/layouts/Layout.astro'
+import logoImage from '../assets/logo.svg'
+---
+
+<Layout title="Form/Live" description="Form.live should be the simplest way to get a good looking UI, given JSON output." url="https://form.live/">
+  <main class="flex flex-col min-h-screen justify-center">
+    <div class="flex flex-col md:flex-row items-start">
+      <h1 class="shrink w-full [aspect-ratio:29/3] bg-[length:100%] bg-no-repeat [text-indent:-9999px] overflow-hidden" style={`background-image: url(${logoImage.src});`}>Form/Live</h1>
+      <div class="grow max-w-[416px] text-sm md:text-base p-4 md:p-0 md:mx-12 md:mr-[10%]">
+        <p>Form.live should be the simplest way to get a good looking UI, given JSON output.</p>
+        <p class="mt-4">
+          Project by Jonas Lekevicius, currently on hold. For any inquiries, <a class="underline underline-offset-2 decoration-from-font" href="https://lekevicius.com/">contact me</a>.
+        </p>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style is:global>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+</style>
+<style>
+  @reference '../../../../_base/src/styles/global.css';
+
+  :root {
+    font-family: 'Space Mono', serif;
+    background-color: #edecf4;
+    color: #4a4d61;
+  }
+</style>
