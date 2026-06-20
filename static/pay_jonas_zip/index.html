@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pay Jonas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="format-detection" content="telephone=no, email=no, address=no">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=JetBrains+Mono&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --text: 111, 72, 51;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Inter, sans-serif;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .mono {
+      font-family: 'JetBrains Mono', monospace;
+      word-break: break-all;
+      font-size: 0.875rem;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    html {
+      background: linear-gradient(180deg, #fbfaf8 0%, #f9f7f3 100%) no-repeat bottom;
+      background-size: 100% 100%;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    body {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    article {
+      max-width: 26rem;
+      min-width: 20rem;
+      width: 100%;
+      color: rgb(var(--text));
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 2rem;
+      letter-spacing: -0.03rem;
+    }
+
+    header p {
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.5rem;
+      letter-spacing: -0.0175rem;
+      margin-top: 0.5rem;
+    }
+
+    .hide {
+      display: none;
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      margin-top: 1rem;
+
+      border-radius: 0.75rem;
+      border: 1px solid rgba(var(--text), 0.12);
+      background: rgba(255, 255, 255, 0.5);
+      box-shadow: 0px 4px 6px -2px rgba(var(--text), 0.05), 0px 8px 15px -3px rgba(var(--text), 0.08);
+    }
+
+    section div.primary-item {
+      display: flex;
+      align-items: start;
+      padding: 1rem;
+      gap: 1rem;
+      border-bottom: 1px solid rgba(var(--text), 0.12);
+    }
+
+    section div.primary-item p {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+
+    section div.primary-item p strong {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+
+    span.muted {
+      color: rgba(var(--text), 0.4)
+    }
+
+    section div.dual-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(var(--text), 0.12);
+    }
+
+    section div.dual-item a {
+      display: flex;
+      align-items: center;
+      padding: 1rem 0.25rem 1rem 1rem;
+      width: 50%;
+      border-right: 1px solid rgba(var(--text), 0.12);
+    }
+
+    section div.dual-item a:last-child {
+      border-right: none;
+    }
+
+    section div.text-item {
+      padding: 1rem;
+      border-bottom: 1px solid rgba(var(--text), 0.12);
+    }
+
+    a.icon-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      color: inherit;
+    }
+
+    section div:last-child {
+      border-bottom: none;
+    }
+
+    .text-item a.icon-link {
+      margin-top: 0.5rem;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      background: rgba(var(--text), 0.8);
+      color: #fff;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      animation: fadeOut 2s ease-in-out;
+    }
+
+    @keyframes fadeOut {
+      0% {
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 1;
+      }
+
+      90% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <article>
+    <header>
+      <h1>How to pay to Jonas?</h1>
+      <p id="amount" class="hide">
+        It seems you owe Jonas <strong>9 Euros</strong>.
+      </p>
+    </header>
+    <section>
+      <div class="primary-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="52" fill="none" viewBox="0 0 40 52">
+          <path fill="url(#a)" fill-rule="evenodd"
+            d="M40 20c0 11.046-8.954 20-20 20S0 31.046 0 20 8.954 0 20 0s20 8.954 20 20ZM20 42a21.9 21.9 0 0 0 12.653-4c-2.247 4.73-7.068 8-12.653 8-5.585 0-10.406-3.27-12.653-8A21.9 21.9 0 0 0 20 42Zm0 6c2.81 0 5.452-.725 7.747-1.997a8.003 8.003 0 0 1-15.494 0A15.928 15.928 0 0 0 20 48ZM8 20v10.583A15.94 15.94 0 0 1 4 20c0-8.837 7.163-16 16-16 2.914 0 5.647.78 8 2.14V20a8 8 0 0 1-8 8v-4a4 4 0 0 0 4-4V8.683A11.98 11.98 0 0 0 20 8C13.373 8 8 13.373 8 20Zm28 0c0 8.837-7.163 16-16 16-2.914 0-5.647-.78-8-2.14V20a8 8 0 0 1 8-8v4a4 4 0 0 0-4 4v11.317A11.98 11.98 0 0 0 20 32c6.627 0 12-5.373 12-12V9.417c2.49 2.82 4 6.525 4 10.583Z"
+            clip-rule="evenodd" />
+          <defs>
+            <linearGradient id="a" x1="20" x2="20" y1="0" y2="52" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#FED69A" />
+              <stop offset="1" stop-color="#F0B440" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <div>
+          <p><strong>LT80 7300 0101 1057 7064</strong></p>
+          <p>Jonas Lekevičius</p>
+          <p>Swedbank <span class="muted">(SWIFT: HABALT22)</span></p>
+        </div>
+      </div>
+      <div class="dual-item">
+        <a class="icon-link" href="#" id="copy-account">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+            <path fill="currentColor"
+              d="M14 10.333v3c0 .367-.3.667-.667.667h-6a.664.664 0 0 1-.666-.667v-6a.66.66 0 0 1 .666-.666h6c.367 0 .667.293.667.666v3Zm1.333 0v-3c0-1.106-.9-2-2-2h-6c-1.106 0-2 .894-2 2v6c0 1.1.894 2 2 2h6c1.1 0 2-.9 2-2v-3Z" />
+            <path fill="currentColor"
+              d="M3.333 9.333h-.666A.664.664 0 0 1 2 8.667v-6A.66.66 0 0 1 2.667 2h6c.366 0 .666.293.666.667v.666c0 .367.294.667.667.667.367 0 .667-.3.667-.667v-.666c0-1.107-.9-2-2-2h-6c-1.107 0-2 .893-2 2v6c0 1.1.893 2 2 2h.666c.367 0 .667-.3.667-.667 0-.373-.3-.667-.667-.667Z" />
+          </svg>
+          <span>Copy Account</span>
+        </a>
+        <a class="icon-link" href="#" id="copy-name">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+            <path fill="currentColor"
+              d="M14 10.333v3c0 .367-.3.667-.667.667h-6a.664.664 0 0 1-.666-.667v-6a.66.66 0 0 1 .666-.666h6c.367 0 .667.293.667.666v3Zm1.333 0v-3c0-1.106-.9-2-2-2h-6c-1.106 0-2 .894-2 2v6c0 1.1.894 2 2 2h6c1.1 0 2-.9 2-2v-3Z" />
+            <path fill="currentColor"
+              d="M3.333 9.333h-.666A.664.664 0 0 1 2 8.667v-6A.66.66 0 0 1 2.667 2h6c.366 0 .666.293.666.667v.666c0 .367.294.667.667.667.367 0 .667-.3.667-.667v-.666c0-1.107-.9-2-2-2h-6c-1.107 0-2 .893-2 2v6c0 1.1.893 2 2 2h.666c.367 0 .667-.3.667-.667 0-.373-.3-.667-.667-.667Z" />
+          </svg>
+          <span>Copy Name</span>
+        </a>
+      </div>
+      <div class="dual-item">
+        <a class="icon-link" href="https://revolut.me/lekevicius">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+            <path fill="currentColor"
+              d="m7.523 4.381.11-.777c1.103-.079 2.453.104 2.15 2.078-.33 2.138-1.71 2.114-2.516 2.1-.09-.002-.17-.004-.244-.002.217-1.389.357-2.38.5-3.399Z" />
+            <path fill="currentColor" fill-rule="evenodd"
+              d="M13.377 14.91c.595-.323.881-1.124.596-1.758-.07-.159-.147-.328-.227-.505-.51-1.13-1.156-2.562-1.426-3.347a5.826 5.826 0 0 0 1.23-1.352c.28-.431.484-.906.605-1.406.154-.684.18-1.392.079-2.086-.057-.387-.153-.893-.39-1.374a4.62 4.62 0 0 0-1.079-1.44c-.66-.577-1.503-.907-2.339-1.079C9.606.394 8.77.38 7.936.381 7.45.38 6.965.4 6.48.435c-.398.032-.795.072-1.191.12C4.9.6 4.51.648 4.138.773c-.34.113-.662.373-.837.702a1.457 1.457 0 0 0-.148.668c0 .12.004.24.01.361.004.124.01.248.008.372-.003.258-.017.517-.037.775-.04.489-.106.975-.172 1.46l-.009.068-.003.017c-.252 1.832-.8 5.488-1.2 7.499l-.006.026c-.1.55-.025 1.367.486 2.01.32.403.925.885 1.987.886 1.185.001 1.753-.183 2.224-.335.746-.24 1.17-.75 1.289-1.004.456.736 1.514 1.34 2.57 1.34a9.402 9.402 0 0 0 1.957-.254 4.88 4.88 0 0 0 1.12-.455ZM4.636 3.25a9.95 9.95 0 0 0-.008-1.014c-.004-.074.823-.158 1.121-.187a16.784 16.784 0 0 1 3.053-.107c.91.05 1.843.14 2.652.616.48.282.832.723 1.08 1.229.134.27.2.603.244.903a4.118 4.118 0 0 1-.05 1.478c-.08.33-.219.64-.4.923a4.412 4.412 0 0 1-.938 1.018c-.26.21-.537.4-.822.573.588 1.983 1.668 4.684 2.046 4.894-.13.156-1.032.436-2.259.504-.957.053-1.301-1.042-1.301-1.042l-1.17-3.535H6.769l-.081.547c-.277 1.848-.479 3.192-.193 3.51 0 0-.25.348-1.82.509-.432.044-1.05-.01-1.292-.45-.228-.417-.123-.954-.032-1.422.017-.088.034-.173.048-.255l.005-.035c.189-1.1.377-2.197.544-3.302.161-1.06.315-2.124.46-3.189l.016-.111c.047-.34.092-.681.13-1.023.038-.343.068-.687.083-1.032Z"
+              clip-rule="evenodd" />
+          </svg>
+          <span>Pay with Revolut</span>
+        </a>
+        <a class="icon-link" href="https://paypal.me/lekevicius">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+            <path
+              d="M6.584 3.2a.461.461 0 0 0-.456.39l-.757 4.8-.695 4.41v.004-.004l.696-4.41A.46.46 0 0 1 5.827 8h2.218a4.53 4.53 0 0 0 4.472-3.835c.026-.167.04-.333.043-.497a4.206 4.206 0 0 0-1.963-.468H6.584Z"
+              fill="currentColor" />
+            <path
+              d="M12.56 3.668c-.003.164-.017.33-.043.497A4.53 4.53 0 0 1 8.044 8H5.827a.46.46 0 0 0-.456.39l-.695 4.41-.437 2.767a.375.375 0 0 0 .37.433h2.408a.461.461 0 0 0 .455-.39l.634-4.02a.461.461 0 0 1 .456-.39h1.417a4.53 4.53 0 0 0 4.472-3.835c.245-1.566-.543-2.99-1.89-3.697Z"
+              opacity=".4" fill="currentColor" />
+            <path
+              d="M3.849 0a.461.461 0 0 0-.456.39L1.505 12.366a.375.375 0 0 0 .37.433h2.8l.696-4.41.757-4.8a.461.461 0 0 1 .456-.39h4.013c.73 0 1.396.17 1.963.468C12.6 1.658 10.941 0 8.662 0H3.85Z"
+              opacity=".8" fill="currentColor" />
+          </svg>
+          <span>Pay with PayPal</span>
+        </a>
+      </div>
+      <div class="text-item">
+        <p class="mono">0x3bf0282b0199D486c4ABC76298c0F3dbDfA77455</p>
+        <a class="icon-link" href="#" id="copy-crypto">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+            <path fill="currentColor"
+              d="M14 10.333v3c0 .367-.3.667-.667.667h-6a.664.664 0 0 1-.666-.667v-6a.66.66 0 0 1 .666-.666h6c.367 0 .667.293.667.666v3Zm1.333 0v-3c0-1.106-.9-2-2-2h-6c-1.106 0-2 .894-2 2v6c0 1.1.894 2 2 2h6c1.1 0 2-.9 2-2v-3Z" />
+            <path fill="currentColor"
+              d="M3.333 9.333h-.666A.664.664 0 0 1 2 8.667v-6A.66.66 0 0 1 2.667 2h6c.366 0 .666.293.666.667v.666c0 .367.294.667.667.667.367 0 .667-.3.667-.667v-.666c0-1.107-.9-2-2-2h-6c-1.107 0-2 .893-2 2v6c0 1.1.893 2 2 2h.666c.367 0 .667-.3.667-.667 0-.373-.3-.667-.667-.667Z" />
+          </svg>
+          <span>Copy crypto wallet address</span>
+        </a>
+      </div>
+
+    </section>
+  </article>
+  <script>
+    const copyAccount = document.querySelector('#copy-account');
+    const copyName = document.querySelector('#copy-name');
+    // const copyCrypto = document.querySelector('#copy-crypto');
+
+    copyAccount.addEventListener('click', (e) => {
+      e.preventDefault();
+      copyToClipboard('LT807300010110577064');
+      showToast('Copied!');
+    });
+
+    copyName.addEventListener('click', (e) => {
+      e.preventDefault();
+      copyToClipboard('Jonas Lekevičius');
+      showToast('Copied!');
+    });
+
+    // copyCrypto.addEventListener('click', (e) => {
+    //   e.preventDefault();
+    //   copyToClipboard('0x3bf0282b0199D486c4ABC76298c0F3dbDfA77455');
+    //   showToast('Copied!');
+    // });
+
+    function copyToClipboard(text) {
+      const el = document.createElement('textarea');
+      el.value = text;
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand('copy');
+      document.body.removeChild(el);
+    }
+
+    function showToast(text) {
+      const toast = document.createElement('div');
+      toast.classList.add('toast');
+      toast.innerHTML = text;
+      document.body.appendChild(toast);
+      setTimeout(() => {
+        toast.remove();
+      }, 2000);
+    }
+
+    // check if there is a query param
+    // ?9 means 9 euros
+    // set #amount text to the amount and remove .hide class
+    const urlParams = new URLSearchParams(window.location.search);
+    const allEntries = urlParams.entries();
+    const allEntriesArr = Array.from(allEntries);
+    if (allEntriesArr[0] && allEntriesArr[0][0]) {
+      const amount = allEntriesArr[0][0];
+      const amountEl = document.querySelector('#amount');
+      amountEl.innerHTML = `It seems you owe Jonas <strong>${amount} Euros</strong>.`;
+      amountEl.classList.remove('hide');
+    }
+  </script>
+</body>
+
+</html>

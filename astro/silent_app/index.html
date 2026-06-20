@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" style="background:#02050a">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silent - Secure Communications</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <canvas id="shader" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  
+  <main class="content">
+    <header class="logo">
+      <img src="/src/logo.svg" alt="Silent" class="logo-img">
+    </header>
+
+    <p class="description">
+      Silent is a secure communications platform for teams that do the world's most sensitive work. Silent supports all the comforts of modern communication tools — file sharing, public channels, mentions — while being maximally encrypted. Silent is secured end-to-end with quantum-secure algorithms, and leaks no metadata about groups or identities of members.
+    </p>
+
+    <section class="signup" aria-label="Email signup">
+      <p class="signup-text">
+        Currently in limited internal testing. Sign up to be notified when we'll be onboarding more teams.
+      </p>
+      <form class="signup-form" action="#" method="post">
+        <label for="email" class="sr-only">Your email</label>
+        <input id="email" name="email" type="email" required placeholder="Your email">
+        <button type="submit">Notify me</button>
+      </form>
+    </section>
+
+    <nav class="links" aria-label="Footer links">
+      <a href="mailto:founders@silent.dev">Contact founders</a>
+      <a href="https://x.com/silent" target="_blank" rel="noopener">Follow us on X</a>
+    </nav>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
