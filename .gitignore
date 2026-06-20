@@ -1,19 +1,12 @@
-# Symlinked files in sites (from _base)
-sites/*/node_modules
-sites/*/astro.config.mjs
-sites/*/pnpm-workspace.yaml
-sites/*/pnpm-lock.yaml
-sites/*/package.json
-sites/*/tsconfig.json
-
 # Build outputs
-sites/*/dist/
-sites/*/.astro/
-_base/dist/
-_base/.astro/
+astro/*/dist/
+astro/*/.astro/
+astro/_base/dist/
+astro/_base/.astro/
 
 # Dependencies
-_base/node_modules/
+astro/_base/node_modules/
+astro/*/node_modules/
 
 # Misc
 .DS_Store

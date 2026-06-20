@@ -1,36 +1,31 @@
-# To run alive.app in development mode
-SITE=alive.app pnpm dev
+# Sites
 
-Run:
-docker-compose -f docker-compose.dev.yml pull && docker-compose -f docker-compose.dev.yml up
+This repo contains static sites in `static/` and Astro-based sites in `astro/`.
 
-# To build alive.app
-SITE=alive.app pnpm build```
-***Why this is better:*** This provides a clean, consistent, and scalable way to run commands for any website in your `websites/` directory without needing to `cd` into it. It relies on the `name` field in each site's `package.json`.
+## Astro Development
 
-### Step 3: Clean Up the `alive.app` Website
+```sh
+./dev.sh alive_app
+```
 
-The `alive.app` site has several configuration issues and a very confused `index.astro` file that mixes Astro and Next.js/React syntax.
+## Astro Build
 
-#### A. Fix the Astro Config
+```sh
+./build.sh alive_app
+```
 
-**File to Edit:** `websites/alive.app/astro.config.ts`
+The build output is written to `astro/<site>/dist`.
 
-**Correction:**
-The `outDir` should be specific to the site being built.
+## Cloudflare Pages
 
-```typescript
-import { defineConfig } from 'astro/config'
-import acmePreset from '../../packages/astro-preset/src/index'
+Use these settings for each Astro-based site, replacing `alive_app` with the site directory you are deploying:
 
-export default defineConfig({
-  site: 'https://alive.app',
-  outDir: '../../dist/alive.app', // Correct output directory
-  integrations: [acmePreset()],
-})
+| Setting | Value |
+| --- | --- |
+| Framework preset | Astro |
+| Root directory | `astro/alive_app` |
+| Build command | `pnpm pages:build` |
+| Build output directory | `dist` |
+| Node.js version | `26` |
 
-# Base Static Site
-
-pnpm dev to dev
-pnpm build to build
-then docker something...
+For a custom domain, attach the matching production domain in Cloudflare Pages after the first deploy.

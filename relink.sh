@@ -3,8 +3,8 @@
 # Re-create symlinks for all sites after cloning
 # Git tracks symlinks, but they may not work on Windows or some configurations
 
-BASE_DIR="_base"
-SITES_DIR="sites"
+BASE_DIR="astro/_base"
+SITES_DIR="astro"
 
 # Check if _base directory exists
 if [ ! -d "$BASE_DIR" ]; then
@@ -25,13 +25,15 @@ SYMLINK_FILES=(
     "pnpm-lock.yaml"
     "pnpm-workspace.yaml"
     "tsconfig.json"
-    "node_modules"
 )
 
 # Process each site
 for site in "$SITES_DIR"/*/; do
     if [ -d "$site" ]; then
         site_name=$(basename "$site")
+        if [ "$site_name" = "_base" ] || [ ! -d "$site/src/pages" ]; then
+            continue
+        fi
         echo "Relinking: $site_name"
         
         cd "$site"
@@ -43,7 +45,7 @@ for site in "$SITES_DIR"/*/; do
             fi
             
             # Create new symlink
-            ln -s "../../$BASE_DIR/$file" "$file"
+            ln -s "../_base/$file" "$file"
             echo "  ✓ $file"
         done
         
@@ -53,4 +55,4 @@ done
 
 echo ""
 echo "Done! All sites relinked to _base."
-echo "Run 'cd _base && pnpm install' if node_modules is missing."
+echo "Run 'cd astro/_base && pnpm install' if dependencies are missing."

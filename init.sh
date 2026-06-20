@@ -8,8 +8,9 @@ if [ $# -eq 0 ]; then
 fi
 
 SITE_NAME="$1"
-SITE_DIR="sites/$SITE_NAME"
-BASE_DIR="_base"
+SITE_DIR="astro/$SITE_NAME"
+BASE_DIR="astro/_base"
+BASE_LINK="../_base"
 
 # Check if site directory already exists
 if [ -d "$SITE_DIR" ]; then
@@ -33,12 +34,11 @@ cd "$SITE_DIR"
 
 echo "Creating symlinks to base configuration files..."
 # Create symlinks to base configuration files
-ln -s "../../$BASE_DIR/astro.config.mjs" astro.config.mjs
-ln -s "../../$BASE_DIR/package.json" package.json
-ln -s "../../$BASE_DIR/pnpm-lock.yaml" pnpm-lock.yaml
-ln -s "../../$BASE_DIR/pnpm-workspace.yaml" pnpm-workspace.yaml
-ln -s "../../$BASE_DIR/node_modules" node_modules
-ln -s "../../$BASE_DIR/tsconfig.json" tsconfig.json
+ln -s "$BASE_LINK/astro.config.mjs" astro.config.mjs
+ln -s "$BASE_LINK/package.json" package.json
+ln -s "$BASE_LINK/pnpm-lock.yaml" pnpm-lock.yaml
+ln -s "$BASE_LINK/pnpm-workspace.yaml" pnpm-workspace.yaml
+ln -s "$BASE_LINK/tsconfig.json" tsconfig.json
 
 echo "Copying public and src folders..."
 # Copy public and src folders from base
