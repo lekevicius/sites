@@ -20,7 +20,6 @@ fi
 
 # Files to symlink
 SYMLINK_FILES=(
-    "astro.config.mjs"
     "package.json"
     "pnpm-lock.yaml"
     "pnpm-workspace.yaml"
@@ -37,6 +36,8 @@ for site in "$SITES_DIR"/*/; do
         echo "Relinking: $site_name"
         
         cd "$site"
+        cp "../_base/astro.config.mjs" astro.config.mjs
+        echo "  ✓ astro.config.mjs"
         
         for file in "${SYMLINK_FILES[@]}"; do
             # Remove existing file/symlink if it exists

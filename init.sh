@@ -32,9 +32,8 @@ mkdir -p "$SITE_DIR"
 # Navigate to site directory
 cd "$SITE_DIR"
 
-echo "Creating symlinks to base configuration files..."
-# Create symlinks to base configuration files
-ln -s "$BASE_LINK/astro.config.mjs" astro.config.mjs
+echo "Creating base configuration files..."
+cp "../../$BASE_DIR/astro.config.mjs" astro.config.mjs
 ln -s "$BASE_LINK/package.json" package.json
 ln -s "$BASE_LINK/pnpm-lock.yaml" pnpm-lock.yaml
 ln -s "$BASE_LINK/pnpm-workspace.yaml" pnpm-workspace.yaml
